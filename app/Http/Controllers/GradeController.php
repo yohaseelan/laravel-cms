@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Student;
 use App\Grade;
-class StudentController extends Controller
+class GradeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,23 +13,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //return 'welcome';
-
-        $students=Student::all();
-        return view('student.index',compact('students'));
-
-
-
-       // $student->grade;
-       // dd($student);
-     //  $grades=Grade::get()->students;
-       //dd($grades);
-     //  $grade=Grade::find(1)->students;
-      // dd($grade);
-
-       // $students=Student::find(1)->grade;
-
-       // dd($students);
+        $grades=Grade::all();
+        return view('grade.index',compact('grades'));
     }
 
     /**
