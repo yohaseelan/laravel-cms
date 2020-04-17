@@ -15,5 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('student','StudentController@index');
-Route::get('grades','GradeController@index');
+//Route::get('student','StudentController@index');
+//Route::get('grades','GradeController@index');
+
+Route::resource('students', 'StudentController');
+Route::resource('grades', 'GradeController');
+Route::resource('subjects', 'SubjectController');
+
+
+

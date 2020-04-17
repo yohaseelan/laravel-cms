@@ -44,9 +44,14 @@ class GradeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
-        //
+        $grade=Grade::find($id);
+
+       // dd($students);
+dd($grade);
+    return view('grade.show',compact('grade'));
     }
 
     /**

@@ -20,6 +20,8 @@ class StudentController extends Controller
         return view('student.index',compact('students'));
 
 
+        
+
 
        // $student->grade;
        // dd($student);
@@ -62,7 +64,10 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        //
+        $student=Student::find($id);
+
+        return view('student.show',compact('student'));
+    //    dd($student);
     }
 
     /**
